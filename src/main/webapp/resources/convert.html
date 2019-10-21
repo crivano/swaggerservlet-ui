@@ -1,0 +1,17 @@
+<div
+	cg-busy="{promise:promise,message:'Aguarde...',templateUrl:'resources/busy.html'}">
+
+	<div class="container-fluid" style="padding-top: 30px; height: 100%;">
+		<div class="row" style="height: 100%">
+			<div class="col-sm-6" style="height: 100%">
+				<h3>Swagger.yaml</h3>
+				<textarea class="form-control" rows="30" ng-model='yaml'
+					ng-model-options='{ debounce: 1000 }' ng-change='convert()'></textarea>
+			</div>
+			<div class="col-sm-6" style="height: 100%">
+				<h3>Java Interface</h3>
+				<textarea class="form-control" rows="30" ng-model='java'></textarea>
+			</div>
+		</div>
+	</div>
+</div>

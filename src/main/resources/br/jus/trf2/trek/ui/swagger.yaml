@@ -1,0 +1,48 @@
+﻿swagger: '2.0'
+
+info:
+  version: "1.0.0"
+  title: TrekUI
+  description: Swagger.yaml to Java Interface converter
+
+# host: assijus.jfrj.jus.br
+basePath: /tnusigner/api/v1
+schemes: [http]
+consumes: [application/json]
+produces: [application/json]
+
+tags:
+  - name: convert
+    description: Converter
+
+paths:
+  /convert:
+    post:
+      description: Convert
+      tags: [convert]
+      parameters:
+        - name: yaml
+          in: formData
+          description: swagger.yaml file
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              java:
+                type: string
+        500:
+          description: Error ocurred
+          schema:
+            $ref: "#/definitions/Error"
+
+
+definitions:
+  Error:
+    type: object
+    properties:
+      error:
+        type: string
