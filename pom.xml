@@ -9,14 +9,14 @@
 	<url>http://maven.apache.org</url>
 
 	<build>
-		<finalName>trek-ui</finalName>
+		<finalName>swaggerservlet-ui</finalName>
 	</build>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.crivano</groupId>
 			<artifactId>swaggerservlet</artifactId>
-			<version>1.23.0</version>
+			<version>1.30.0</version>
 		</dependency>
 	</dependencies>
 </project>

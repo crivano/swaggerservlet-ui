@@ -1,16 +1,16 @@
-package br.jus.trf2.trek.ui;
+package com.crivano.swaggerservlet.ui;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 
 import com.crivano.swaggerservlet.SwaggerServlet;
 
-public class TrekUIServlet extends SwaggerServlet {
+public class SwaggerServletUIServlet extends SwaggerServlet {
 	private static final long serialVersionUID = -1611417120964698257L;
 
 	@Override
 	public void initialize(ServletConfig config) throws ServletException {
-		super.setAPI(ITrekUI.class);
-		super.setActionPackage("br.jus.trf2.trek.ui");
+		super.setAPI(ISwaggerServletUI.class);
+		super.setActionPackage("com.crivano.swaggerservlet.ui");
 	}
 }

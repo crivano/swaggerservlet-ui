@@ -1,4 +1,4 @@
-package br.jus.trf2.trek.ui;
+package com.crivano.swaggerservlet.ui;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -6,10 +6,9 @@ import java.nio.charset.StandardCharsets;
 
 import com.crivano.swaggerservlet.Swagger;
 import com.crivano.swaggerservlet.SwaggerUtils;
-
-import br.jus.trf2.trek.ui.ITrekUI.ConvertPostRequest;
-import br.jus.trf2.trek.ui.ITrekUI.ConvertPostResponse;
-import br.jus.trf2.trek.ui.ITrekUI.IConvertPost;
+import com.crivano.swaggerservlet.ui.ISwaggerServletUI.ConvertPostRequest;
+import com.crivano.swaggerservlet.ui.ISwaggerServletUI.ConvertPostResponse;
+import com.crivano.swaggerservlet.ui.ISwaggerServletUI.IConvertPost;
 
 public class ConvertPost implements IConvertPost {
 

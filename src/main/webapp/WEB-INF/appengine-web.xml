@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+	<application>swaggerservlet</application>
+	<version>1</version>
+	<threadsafe>true</threadsafe>
+	<sessions-enabled>true</sessions-enabled>
+	<runtime>java8</runtime>
+
+	<automatic-scaling>
+		<min-idle-instances>0</min-idle-instances>
+		<!-- ‘automatic’ is the default value. -->
+		<max-idle-instances>1</max-idle-instances>
+		<!-- ‘automatic’ is the default value. -->
+		<min-pending-latency>100ms</min-pending-latency>
+		<max-pending-latency>automatic</max-pending-latency>
+		<max-concurrent-requests>50</max-concurrent-requests>
+	</automatic-scaling>
+	
+	<static-files>
+		<include path="/index.html" expiration="1s">
+		</include>
+		<include path="/favicon**" expiration="1s">
+		</include>
+		<include path="/assets/**" expiration="1s">
+			<http-header name="Cache-Control" value="public" />
+		</include>
+		<include path="/resources/**" expiration="1s">
+			<http-header name="Cache-Control" value="public" />
+		</include>
+		<include path="/api/**" expiration="1s">
+		</include>
+	</static-files>
+
+	<!-- Configure java.util.logging -->
+	<system-properties>
+		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties" />
+	</system-properties>
+
+</appengine-web-app>

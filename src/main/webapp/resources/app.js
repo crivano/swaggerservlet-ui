@@ -42,7 +42,7 @@ app
 				});
 
 app.controller('ctrlConvert', function($scope, $http, $window, $q, $location) {
-	$scope.yaml = localStorage.getItem("trek-converting-yaml");
+	$scope.yaml = localStorage.getItem("swaggerservlet-converting-yaml");
 
 	$scope.convert = function() {
 		$scope.promise = $http({
@@ -52,7 +52,7 @@ app.controller('ctrlConvert', function($scope, $http, $window, $q, $location) {
 				yaml : $scope.yaml
 			}
 		}).then(function successCallback(response) {
-			localStorage.setItem("trek-converting-yaml", $scope.yaml);
+			localStorage.setItem("swaggerservlet-converting-yaml", $scope.yaml);
 			$scope.java = response.data.java;
 		});
 	}
@@ -65,7 +65,7 @@ app.controller('ctrlConvert', function($scope, $http, $window, $q, $location) {
 app.controller('ctrl',
 		function($scope, $http, $sce) {
 
-			$scope.url = localStorage.getItem("trek-monitoring-url");
+			$scope.url = localStorage.getItem("swaggerservlet-monitoring-url");
 
 			$scope.buildTestList = function(tr) {
 				var list = [];
@@ -102,7 +102,7 @@ app.controller('ctrl',
 					$scope.testlist = $scope.buildTestList($scope.testresult);
 					$scope.buildsvg($scope.graphresult);
 				}
-				localStorage.setItem("trek-monitoring-url", $scope.url);
+				localStorage.setItem("swaggerservlet-monitoring-url", $scope.url);
 				delete $scope.testresult;
 				delete $scope.graphresult;
 				delete $scope.testlist;

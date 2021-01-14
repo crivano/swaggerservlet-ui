@@ -1,11 +1,11 @@
-package br.jus.trf2.trek.ui;
+package com.crivano.swaggerservlet.ui;
 
 import com.crivano.swaggerservlet.ISwaggerMethod;
 import com.crivano.swaggerservlet.ISwaggerModel;
 import com.crivano.swaggerservlet.ISwaggerRequest;
 import com.crivano.swaggerservlet.ISwaggerResponse;
 
-public interface ITrekUI {
+public interface ISwaggerServletUI {
 	public class Error implements ISwaggerModel {
 		public String error;
 	}
