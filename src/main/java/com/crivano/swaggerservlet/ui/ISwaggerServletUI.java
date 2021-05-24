@@ -10,16 +10,16 @@ public interface ISwaggerServletUI {
 		public String error;
 	}
 
-	public class ConvertPostRequest implements ISwaggerRequest {
-		public String yaml;
-	}
-
-	public class ConvertPostResponse implements ISwaggerResponse {
-		public String java;
-	}
-
 	public interface IConvertPost extends ISwaggerMethod {
-		public void run(ConvertPostRequest req, ConvertPostResponse resp) throws Exception;
+		public static class Request implements ISwaggerRequest {
+			public String yaml;
+		}
+
+		public static class Response implements ISwaggerResponse {
+			public String java;
+		}
+
+		public void run(Request req, Response resp, SwaggerServletUIContext ctx) throws Exception;
 	}
 
 }
